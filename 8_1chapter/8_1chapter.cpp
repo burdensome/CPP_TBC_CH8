@@ -1,3 +1,4 @@
+// github í…ŒìŠ¤íŠ¸ ê³¼ì—° ì—…ë¡œë“œê°€ ë  ê²ƒì¸ê°€?
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,18 +6,18 @@ using namespace std;
 // Object
 // Friend : sname, address, age, height, weight, ...
 //			print()
-// °´Ã¼¶ó´Â°Ç À§¿Í °°Àº µ¥ÀÌÅ¸¿Í Friedn¿Í ÇÔ¼ö¸¦ ¹­¾î¼­ »ç¿ëÇÏ´Âµ¥
-// °´Ã¼¶ó´Â°É ÇÁ·Î±×·¡¹Ö ¾ğ¾î·Î »ç¿ëÇÏ¸é class¸¦ Á¤ÀÇÇÏ°í »ç¿ëÇÏ´Â°É ¸»ÇÔ
+// ê°ì²´ë¼ëŠ”ê±´ ìœ„ì™€ ê°™ì€ ë°ì´íƒ€ì™€ Friednì™€ í•¨ìˆ˜ë¥¼ ë¬¶ì–´ì„œ ì‚¬ìš©í•˜ëŠ”ë°
+// ê°ì²´ë¼ëŠ”ê±¸ í”„ë¡œê·¸ë˜ë° ì–¸ì–´ë¡œ ì‚¬ìš©í•˜ë©´ classë¥¼ ì •ì˜í•˜ê³  ì‚¬ìš©í•˜ëŠ”ê±¸ ë§í•¨
 
 class Friend {			
-public: // access specifier (public, private, protected)  Ã³·³ ¾²ÀÌ°í, ±¸Á¶Ã¼(structure)¿¡¼± publicÀÌ·±°Ô ¾øÀ½
-	string	m_name;	// ¸â¹öº¯¼ö¿¡ m_ ¸¦ ÇÏ´Â °æ¿ìµµÀÖ°í 
-	string	_address; // ¾ğ´õ½ºÄÚ¾î _ ¸¦ ºÙÀÌ´Â °æ¿ìµµ ÀÖ°í
-	int		age_;	// µÚ¿¡ ¾ğ´õ½ºÄÚ¾î¸¦ ºÙÀÌ´Â °æ¿ìµµ ÀÖ´Ù. (±¸±Û ½ºÅ¸ÀÏ)
+public: // access specifier (public, private, protected)  ì²˜ëŸ¼ ì“°ì´ê³ , êµ¬ì¡°ì²´(structure)ì—ì„  publicì´ëŸ°ê²Œ ì—†ìŒ
+	string	m_name;	// ë©¤ë²„ë³€ìˆ˜ì— m_ ë¥¼ í•˜ëŠ” ê²½ìš°ë„ìˆê³  
+	string	_address; // ì–¸ë”ìŠ¤ì½”ì–´ _ ë¥¼ ë¶™ì´ëŠ” ê²½ìš°ë„ ìˆê³ 
+	int		age_;	// ë’¤ì— ì–¸ë”ìŠ¤ì½”ì–´ë¥¼ ë¶™ì´ëŠ” ê²½ìš°ë„ ìˆë‹¤. (êµ¬ê¸€ ìŠ¤íƒ€ì¼)
 	double height;
 	double weight;
 
-	// ±¸Á¶Ã¼(structure)¿¡´Â ¾Æ·¡¿Í °°ÀÌ ÇÔ¼ö¸¦ ¾È¾²´Â°Ô Åë»óÀû(¾µ ¼ö ÀÖÁö¸¸..)
+	// êµ¬ì¡°ì²´(structure)ì—ëŠ” ì•„ë˜ì™€ ê°™ì´ í•¨ìˆ˜ë¥¼ ì•ˆì“°ëŠ”ê²Œ í†µìƒì (ì“¸ ìˆ˜ ìˆì§€ë§Œ..)
 	void print()
 	{
 		cout << m_name << " " << _address << " " << age_ << " " <<
@@ -35,8 +36,8 @@ void print(const string& name, const string& address, const int& age,
 
 int main() {
 	Friend jj{"Jack Jack","Uptown", 2, 30, 10}; // instanciation, instance
-	// jj Ã³·³ ¸Ş¸ğ¸®¿¡ Á¸Àç ÇÏ³Ä ¾ÈÇÏ³Ä ±×°É ¸»ÇÏ´Â°Ô instanciatin È¤Àº instance°¡ µÇ¾ú´Ù.
-	// Friend´Â ¸Ş¸ğ¸®¸¦ Âï¾îº¸¸é ¾ÆÁ÷ instanciationÀÌ µÇ¾îÀÖÁö ¾Ê´Ù.
+	// jj ì²˜ëŸ¼ ë©”ëª¨ë¦¬ì— ì¡´ì¬ í•˜ëƒ ì•ˆí•˜ëƒ ê·¸ê±¸ ë§í•˜ëŠ”ê²Œ instanciatin í˜¹ì€ instanceê°€ ë˜ì—ˆë‹¤.
+	// FriendëŠ” ë©”ëª¨ë¦¬ë¥¼ ì°ì–´ë³´ë©´ ì•„ì§ instanciationì´ ë˜ì–´ìˆì§€ ì•Šë‹¤.
 	cout << &jj << endl;
 
 	jj.print();
